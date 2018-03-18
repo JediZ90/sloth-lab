@@ -6,6 +6,7 @@ import java.util.Random;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
 
 public class Producer {
 
@@ -15,8 +16,8 @@ public class Producer {
         // Set the brokers (bootstrap servers)
         properties.setProperty("bootstrap.servers", brokers);
         // Set how to serialize key/value pairs
-        properties.setProperty("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        properties.setProperty("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        properties.setProperty("key.serializer", StringSerializer.class.getName());
+        properties.setProperty("value.serializer", StringSerializer.class.getName());
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
         // So we can generate random sentences
