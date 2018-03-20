@@ -26,7 +26,7 @@ public class Producer {
 
         for (int i = 0; i < 1000000; i++) {
             String sentence = sentences[random.nextInt(sentences.length)];
-            producer.send(new ProducerRecord<String, String>("test", sentence));
+            producer.send(new ProducerRecord<String, String>("streams-plaintext-input", sentence));
             String progressBar = "\r" + progressAnimation.charAt(i % progressAnimation.length()) + " " + i;
             System.out.write(progressBar.getBytes());
         }

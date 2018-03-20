@@ -23,7 +23,7 @@ public class Consumer {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
 
         // 订阅 'test' topic
-        consumer.subscribe(Arrays.asList("test"));
+        consumer.subscribe(Arrays.asList("streams-pipe-output"));
 
         int count = 0;
         while (true) {
