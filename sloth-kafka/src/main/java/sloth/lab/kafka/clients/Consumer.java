@@ -1,4 +1,4 @@
-package sloth.lab.kafka;
+package sloth.lab.kafka.clients;
 
 import java.util.Arrays;
 import java.util.Properties;

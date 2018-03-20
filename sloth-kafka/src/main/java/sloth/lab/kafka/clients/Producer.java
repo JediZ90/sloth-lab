@@ -1,4 +1,4 @@
-package sloth.lab.kafka;
+package sloth.lab.kafka.clients;
 
 import java.io.IOException;
 import java.util.Properties;
