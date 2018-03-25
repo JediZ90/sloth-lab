@@ -7,6 +7,7 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 public class Consumer {
@@ -18,20 +19,20 @@ public class Consumer {
         properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers);
         properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupId);
         properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
         properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(properties);
+        KafkaConsumer<String, Object> consumer = new KafkaConsumer<>(properties);
 
         // 订阅 'test' topic
-        consumer.subscribe(Arrays.asList("streams-pipe-output"));
+        consumer.subscribe(Arrays.asList("streams-output"));
 
         int count = 0;
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(200);
+            ConsumerRecords<String, Object> records = consumer.poll(200);
             if (records.count() == 0) {
                 // timeout/nothing to read
             } else {
-                for (ConsumerRecord<String, String> record : records) {
+                for (ConsumerRecord<String, Object> record : records) {
                     // Display record and count
                     count += 1;
                     System.out.println(count + ": " + record.value());

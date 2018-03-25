@@ -22,7 +22,7 @@ public class PipeApp {
 
         StreamsBuilder builder = new StreamsBuilder();
 
-        builder.stream("streams-plaintext-input").to("streams-pipe-output");
+        builder.stream("streams-plaintext-input").to("streams-output");
 
         final KafkaStreams streams = new KafkaStreams(builder.build(), props);
         final CountDownLatch latch = new CountDownLatch(1);
