@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>items</key>
+<array>
+<dict>
+<key>assets</key>
+<array>
+<dict>
+<key>kind</key>
+<string>software-package</string>
+<key>url</key>
+<string>https://www.yyts.vip/cos-api/cos-download/v1/downloadFile/1/yyts-chaos-test/5ac9e6a114de098df746e753411c9e1f/保险线上化.ipa?expires=4823575627&amp;signature=0101Ix96OZao:NzIyNEI1MUM2REU4RkRCODA1OUU3MjVFNjBFMEE1QTdDOUYyRjZFOQ==</string>
+</dict>
+<dict>
+<key>kind</key>
+<string>display-image</string>
+<key>needs-shine</key>
+<true/>
+<key>url</key>
+<string>https://www.yyts.vip/cos-api/cos-download/v1/downloadFile/1/yyts-chaos-test/c2252d2f6b558367d553ef6a4c5e61bc/9ef348860935412287ac530b9a53a490_small_1669372461236424.png?expires=4823042259&amp;signature=0101Ix96OZao:RjRDNjgzMzVDQTA3QUNBOTdDQTZFQUFGNEVBMDI1RTk1RjNDRUNEQw==</string>
+</dict>
+</array>
+<key>metadata</key>
+<dict>
+<key>bundle-identifier</key>
+<string>vip.yyts.care</string>
+<key>bundle-version</key>
+<string>0.0.1</string>
+<key>kind</key>
+<string>software</string>
+<key>subtitle</key>
+<string></string>
+<key>title</key>
+<string>保险线上化</string>
+</dict>
+</dict>
+</array>
+</dict>
+</plist>
